@@ -3894,6 +3894,10 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-fbsdk:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-0.3.0.tgz#52dfa58f2c1796c9df871717fd98b169b7a88ad6"
+
 react-native@0.35.0:
   version "0.35.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.35.0.tgz#59a53e80109a728a7f6c7c9f0f0899c8b14c13b2"
