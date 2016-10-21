@@ -11,6 +11,8 @@ import {
   View
 } from 'react-native';
 
+import {LoginButton} from 'react-native-fbsdk';
+
 export default class ReactModoro extends Component {
   render() {
     return (
@@ -18,6 +20,10 @@ export default class ReactModoro extends Component {
         <Text style={styles.welcome}>
           {'Welcome!'}
         </Text>
+        <LoginButton
+          onLoginFinished={() => ({})}
+          onLogoutFinished={() => ({})}
+          defaultAudience='everyone' />
       </View>
     );
   }
