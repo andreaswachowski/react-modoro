@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
 
 export default class PreSplash extends Component {
   static propTypes = {}
@@ -7,9 +7,8 @@ export default class PreSplash extends Component {
   render() {
     return (
       <View>
-        <Text>
-          {'PreSplash'}
-        </Text>
+        <Image
+          source={require('../../images/logo.png')} />
       </View>
     );
   }
