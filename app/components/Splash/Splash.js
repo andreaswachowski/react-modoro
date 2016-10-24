@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import { LoginButton } from 'react-native-fbsdk';
 import { colors, fontSizes } from '~/styles';
 const { height } = Dimensions.get('window');
+
+Splash.propTypes = {
+  onLoginFinished: PropTypes.func.isRequired
+};
 
 export default function Splash(props) {
   return (
@@ -18,7 +22,7 @@ export default function Splash(props) {
             width: 180,
             marginBottom: 15
           }}
-          onLoginFinished={() => ({})} />
+          onLoginFinished={props.onLoginFinished} />
         <Text style={styles.assuranceText}>
           {'Don\'t worry. We don\'t post anything to Facebook.'}
         </Text>
