@@ -1,13 +1,25 @@
 import React, { PropTypes, Component } from 'react';
-import { View, Text } from 'react-native';
+import { connect } from 'react-redux';
 import { FooterTabs } from '~/components';
 
-export default class FooterTabsContainer extends Component {
-  static propTypes = {}
+class FooterTabsContainer extends Component {
+  static propTypes = {
+    activeFooterTab: PropTypes.string.isRequired
+  }
   state = {}
   render() {
     return (
-      <FooterTabs />
+      <FooterTabs activeFooterTab={this.props.activeFooterTab} />
     );
   }
 }
+
+function mapStateToProps({activeFooterTab}) {
+  return {
+    activeFooterTab
+  };
+}
+
+export default connect(
+  mapStateToProps
+)(FooterTabsContainer);
