@@ -10,11 +10,15 @@ FooterTabs.propTypes = {
 };
 
 export default function FooterTabs(props) {
+  const closeDrawer = () => this.drawer.closeDrawer();
+
   return (
     <DrawerLayoutAndroid
+      ref={(drawer) => (this.drawer = drawer)}
       drawerWidth={290}
       renderNavigationView={() => (
       <Drawer
+        close={closeDrawer}
         activeFooterTab={props.activeFooterTab}
         onTabSelect={props.onTabSelect} />
       )} >
