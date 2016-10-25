@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppContainer } from '~/containers';
+import { AppContainer } from './containers';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
