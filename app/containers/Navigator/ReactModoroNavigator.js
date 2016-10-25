@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Navigator } from 'react-native';
-import { SplashContainer } from '~/containers';
+import { FooterTabsContainer } from '~/containers';
 
 export default class ReactModoroNavigator extends Component {
   renderScene = (route, navigator) => {
-    return <SplashContainer navigator={navigator} />;
+    return <FooterTabsContainer navigator={navigator} />;
   }
 
   configureScene = (route) => {
