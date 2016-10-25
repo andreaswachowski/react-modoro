@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import DrawerHeader from './DrawerHeader';
 import DrawerTab from './DrawerTab';
 
@@ -11,7 +11,7 @@ Drawer.propTypes = {
 
 export default function Drawer(props) {
   return (
-    <View>
+    <View style={styles.container}>
       <DrawerHeader />
       <DrawerTab
         title='Home'
@@ -32,3 +32,9 @@ export default function Drawer(props) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  }
+});
