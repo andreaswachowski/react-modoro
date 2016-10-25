@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
-import { Text, DrawerLayoutAndroid } from 'react-native';
+import { DrawerLayoutAndroid } from 'react-native';
 import { HomeContainer, LeaderboardContainer } from '~/containers';
+import Drawer from './Drawer';
 
 FooterTabs.propTypes = {
   activeFooterTab: PropTypes.string.isRequired,
@@ -13,7 +14,9 @@ export default function FooterTabs(props) {
     <DrawerLayoutAndroid
       drawerWidth={290}
       renderNavigationView={() => (
-        <Text>{'THE DRAWER'}</Text>
+      <Drawer
+        activeFooterTab={props.activeFooterTab}
+        onTabSelect={props.onTabSelect} />
       )} >
       {props.activeFooterTab === 'home'
         ? <HomeContainer navigator={props.navigator} />
