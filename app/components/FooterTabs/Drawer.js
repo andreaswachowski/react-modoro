@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import DrawerHeader from './DrawerHeader';
 
 Drawer.propTypes = {
   activeFooterTab: PropTypes.string.isRequired,
@@ -9,9 +10,7 @@ Drawer.propTypes = {
 export default function Drawer(props) {
   return (
     <View>
-      <Text>
-        {'Drawer'}
-      </Text>
+      <DrawerHeader />
     </View>
   );
 }
