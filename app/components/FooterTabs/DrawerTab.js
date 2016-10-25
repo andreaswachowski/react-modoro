@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
-import { View, Text } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { colors, fontSizes } from '~/styles';
 
 DrawerTab.propTypes = {
   title: PropTypes.string.isRequired,
@@ -9,11 +11,28 @@ DrawerTab.propTypes = {
 };
 
 export default function DrawerTab(props) {
+  const color = props.selected === true ? colors.blue : colors.primary;
+
   return (
-    <View>
-      <Text>
-        {'DrawerTab'}
-      </Text>
-    </View>
+    <TouchableOpacity onPress={props.onPress} style={styles.container}>
+      <Icon
+        name={props.iconName}
+        size={35}
+        color={color} />
+      <Text style={[{color}, styles.titleText]}>{props.title}</Text>
+    </TouchableOpacity>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    margin: 10,
+    marginLeft: 20,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  titleText: {
+    fontSize: fontSizes.secondary,
+    marginLeft: 10
+  }
+});
