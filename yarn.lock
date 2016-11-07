@@ -4597,15 +4597,15 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-remote-redux-devtools@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/remote-redux-devtools/-/remote-redux-devtools-0.5.2.tgz#07ed6ba5f8d551a55d8032cc185f16397e7b5890"
+remote-redux-devtools@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/remote-redux-devtools/-/remote-redux-devtools-0.5.3.tgz#7c98cdda4504866a6f11d16f99e12ae39f2b2da7"
   dependencies:
     jsan "^3.1.3"
     querystring "^0.2.0"
     redux-devtools-instrument "^1.3.1"
     remotedev-utils "0.0.5"
-    socketcluster-client "^5.0.14"
+    socketcluster-client "^5.0.17"
 
 remotedev-utils@0.0.5:
   version "0.0.5"
@@ -4895,9 +4895,9 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-socketcluster-client@^5.0.14:
-  version "5.0.15"
-  resolved "https://registry.yarnpkg.com/socketcluster-client/-/socketcluster-client-5.0.15.tgz#8e508cdf28db1e7250576cd73fb9f2bd23208623"
+socketcluster-client@^5.0.17:
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/socketcluster-client/-/socketcluster-client-5.0.18.tgz#4193a3a869e3240b8ab23c2a341fb52596b06702"
   dependencies:
     base-64 "0.1.0"
     linked-list "0.1.0"
