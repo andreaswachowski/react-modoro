@@ -1,3 +1,5 @@
+import { getAccessToken, authWithToken } from '~/api/auth';
+
 const AUTHENTICATING = 'AUTHENTICATING';
 const IS_AUTHED = 'IS_AUTHED';
 const NOT_AUTHED = 'NOT_AUTHED';
@@ -18,6 +20,15 @@ function isAuthed(uid) {
   return {
     type: IS_AUTHED,
     uid
+  };
+}
+
+export function handleAuthWithFirebase() {
+  return function(dispatch, getState) {
+    dispatch(authenticating());
+    return getAccessToken()
+      .then(({accessToken}) => authWithToken(accessToken))
+      .catch((error) => console.warn('Error in handleAuthWithFirebase: ', error));
   };
 }
 
