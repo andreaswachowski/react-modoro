@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { Navigator } from 'react-native';
-import { FooterTabsContainer } from '~/containers';
+import { SplashContainer, FooterTabsContainer } from '~/containers';
 
 export default class ReactModoroNavigator extends Component {
+  static propTypes = {
+    isAuthed: PropTypes.bool.isRequired
+  }
+
   renderScene = (route, navigator) => {
+    if (this.props.isAuthed === false) {
+      return <SplashContainer navigator={navigator} />;
+    }
+
     return <FooterTabsContainer navigator={navigator} />;
   }
 
