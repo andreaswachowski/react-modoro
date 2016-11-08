@@ -4375,6 +4375,10 @@ react-native-fbsdk:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-0.3.0.tgz#52dfa58f2c1796c9df871717fd98b169b7a88ad6"
 
+react-native-navbar:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/react-native-navbar/-/react-native-navbar-1.5.4.tgz#9e8b1cfb6a02eee89abdf631f7ac3af3174a61b1"
+
 react-native-vector-icons:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-2.1.0.tgz#37ff40e2fc753a56624846e7471282b818b92edc"
