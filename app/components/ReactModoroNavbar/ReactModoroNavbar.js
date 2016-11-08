@@ -9,8 +9,12 @@ ReactModoroNavbar.propTypes = {
 
 export default function ReactModoroNavbar(props) {
   let optionalAttrs = {};
-  props.leftButton && (optionalAttrs.leftButton = React.cloneElement(props.leftButton));
-  props.rightButton && (optionalAttrs.rightButton = React.cloneElement(props.rightButton));
+  props.leftButton && (optionalAttrs.leftButton = React.cloneElement(props.leftButton, {
+    style: {marginLeft: 10, justifyContent: 'center'}
+  }));
+  props.rightButton && (optionalAttrs.rightButton = React.cloneElement(props.rightButton, {
+    style: {marginRight: 10, justifyContent: 'center'}
+  }));
   return (
     <NavigationBar
       {...optionalAttrs}
