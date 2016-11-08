@@ -9,7 +9,7 @@ Home.propTypes = {
 export default function Home(props) {
   return (
     <View>
-      <ReactModoroNavbar />
+      <ReactModoroNavbar title='Home' />
       <Text>
         {'Home'}
       </Text>
