@@ -11,7 +11,7 @@ FooterTabs.propTypes = {
 
 export default function FooterTabs(props) {
   const closeDrawer = () => this.drawer.closeDrawer();
-  const openDrawer = () => this.drawer.closeDrawer();
+  const openDrawer = () => this.drawer.openDrawer();
 
   return (
     <DrawerLayoutAndroid
