@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Platform } from 'react-native';
 import NavigationBar from 'react-native-navbar';
 import { colors } from '~/styles';
 
@@ -19,6 +20,7 @@ export default function ReactModoroNavbar(props) {
   return (
     <NavigationBar
       {...optionalAttrs}
+      style={Platform.OS === 'android' ? {marginTop: 8, marginBottom: 8} : null}
       tintColor={colors.tabPrimary}
       title={{title: props.title}} />
   );
