@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { ReactModoroNavbar, Gear } from '~/components';
+import { View, Text, Platform } from 'react-native';
+import { ReactModoroNavbar, Gear, Hamburger } from '~/components';
 
 Home.propTypes = {
 
@@ -11,6 +11,7 @@ export default function Home(props) {
     <View>
       <ReactModoroNavbar
         title='Home'
+        leftButton={Platform.OS === 'android' ? <Hamburger /> : null}
         rightButton={<Gear onPress={() => console.log('Gear!')}/>} />
       <Text>
         {'Home'}
