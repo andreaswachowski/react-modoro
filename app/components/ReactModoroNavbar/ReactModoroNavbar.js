@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import NavigationBar from 'react-native-navbar';
+import { colors } from '~/styles';
 
 ReactModoroNavbar.propTypes = {
   title: PropTypes.string.isRequired,
@@ -18,6 +19,7 @@ export default function ReactModoroNavbar(props) {
   return (
     <NavigationBar
       {...optionalAttrs}
+      tintColor={colors.tabPrimary}
       title={{title: props.title}} />
   );
 }
