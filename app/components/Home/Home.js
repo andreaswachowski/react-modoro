@@ -3,7 +3,8 @@ import { View, Text, Platform } from 'react-native';
 import { ReactModoroNavbar, Gear, Hamburger } from '~/components';
 
 Home.propTypes = {
-  openDrawer: PropTypes.func // only needed for Android
+  openDrawer: PropTypes.func, // only needed for Android
+  handleToSettings: PropTypes.func.isRequired
 };
 
 export default function Home(props) {
@@ -12,7 +13,7 @@ export default function Home(props) {
       <ReactModoroNavbar
         title='Home'
         leftButton={Platform.OS === 'android' ? <Hamburger onPress={props.openDrawer} /> : null}
-        rightButton={<Gear onPress={() => console.log('Gear!')}/>} />
+        rightButton={<Gear onPress={props.handleToSettings}/>} />
       <Text>
         {'Home'}
       </Text>
