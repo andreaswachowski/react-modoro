@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { Navigator } from 'react-native';
-import { SplashContainer, FooterTabsContainer, SettingsContainer } from '~/containers';
+import { SplashContainer, FooterTabsContainer } from '~/containers';
 
 export default class ReactModoroNavigator extends Component {
   static propTypes = {
@@ -8,12 +8,11 @@ export default class ReactModoroNavigator extends Component {
   }
 
   renderScene = (route, navigator) => {
-    return <SettingsContainer navigator={navigator} />;
-    // if (this.props.isAuthed === false) {
-    //   return <SplashContainer navigator={navigator} />;
-    // }
+    if (this.props.isAuthed === false) {
+      return <SplashContainer navigator={navigator} />;
+    }
 
-    // return <FooterTabsContainer navigator={navigator} />;
+    return <FooterTabsContainer navigator={navigator} />;
   }
 
   configureScene = (route) => {
