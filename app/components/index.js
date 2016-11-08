@@ -6,3 +6,4 @@ export Leaderboard from './Leaderboard/Leaderboard';
 export ReactModoroNavbar from './ReactModoroNavbar/ReactModoroNavbar';
 export Gear from './Icons/Gear';
 export Hamburger from './Icons/Hamburger';
+export Settings from './Settings/Settings';
